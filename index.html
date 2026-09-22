@@ -238,10 +238,10 @@
 
         .pricing-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 350px));
+            grid-template-columns: repeat(2, minmax(0, 350px));
             justify-content: center;
             gap: 30px;
-            align-items: start;
+            align-items: stretch;
         }
 
         .price-card {
@@ -286,6 +286,12 @@
             content: "✓ ";
             color: #667eea;
             font-weight: bold;
+        }
+
+        .contact-quote {
+            color: #007bff;
+            text-align: center;
+            margin-top: 30px;
         }
 
         /* Testimonials */
@@ -356,6 +362,16 @@
 
         footer .footer-brand span {
             color: #667eea;
+        }
+
+        @media (max-width: 720px) {
+            .pricing-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .price-card {
+                width: 100%;
+            }
         }
     </style>
 </head>
@@ -447,10 +463,12 @@
 
             <div class="price-card">
                 <h3>Corporate Packages</h3>
-                <p>Contact us for a quote.</p>
                 <ul>
                     <li>Discount for larger orders</li>
+                    <li>Perfect for hybrid workers</li>
+                    <li>Free shipping</li>
                 </ul>
+                <p class="contact-quote">Contact us for a quote.</p>
             </div>
         </div>
     </section>
